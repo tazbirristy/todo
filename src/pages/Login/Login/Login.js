@@ -71,7 +71,7 @@ const Login = () => {
           };
           console.log(user);
           // save the user information to the database
-          fetch(`https://car-hut-server.vercel.app/user/${user?.email}`, {
+          fetch(`https://todo-server-dusky.vercel.app/user/${user?.email}`, {
             method: "PUT",
             headers: {
               "content-type": "application/json",
@@ -105,7 +105,7 @@ const Login = () => {
           <Lottie animationData={login} loop={true} />
         </div>
         <div className="lg:w-1/2" data-aos="zoom-in" data-aos-duration="2000">
-          <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-cyan-900 dark:text-gray-100 mt-10">
+          <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-blue-900 dark:text-gray-100 mt-10">
             <h1 className="text-3xl font-bold text-center">Login</h1>
             <p className="text-red-500 my-3 text-center">{error}</p>
             <form
@@ -121,7 +121,7 @@ const Login = () => {
                   name="email"
                   id="userEmail"
                   placeholder="Enter Your Email"
-                  className="w-full px-4 py-3 rounded-md dark:bg-gray-800 dark:text-gray-100 outline-cyan-400"
+                  className="w-full px-4 py-3 rounded-md dark:bg-gray-800 dark:text-gray-100 outline-blue-400"
                   required
                 />
               </div>
@@ -134,7 +134,7 @@ const Login = () => {
                   name="password"
                   id="password"
                   placeholder="Enter Your Password"
-                  className="w-full px-4 py-3 rounded-md dark:bg-gray-800 dark:text-gray-100 outline-cyan-400"
+                  className="w-full px-4 py-3 rounded-md dark:bg-gray-800 dark:text-gray-100 outline-blue-400"
                   required
                 />
                 <div className="flex justify-end text-xs dark:text-gray-400">
@@ -144,7 +144,7 @@ const Login = () => {
                 </div>
               </div>
               <div>
-                <button className="block w-full p-3 text-center rounded-md dark:text-gray-200 bg-gradient-to-r from-cyan-600 to-cyan-200 hover:to-cyan-600 hover:from-cyan-900">
+                <button className="block w-full p-3 text-center rounded-md dark:text-gray-200 bg-gradient-to-r from-cyan-600 to-blue-200 hover:to-blue-600 hover:from-blue-900">
                   {loading ? <SmallSpinner /> : "Sign in"}
                 </button>
               </div>
@@ -165,7 +165,7 @@ const Login = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 32 32"
-                  className="w-7 h-7 fill-current text-gray-200 hover:text-cyan-400"
+                  className="w-7 h-7 fill-current text-gray-200 hover:text-blue-400"
                 >
                   <path d="M16.318 13.714v5.484h9.078c-0.37 2.354-2.745 6.901-9.078 6.901-5.458 0-9.917-4.521-9.917-10.099s4.458-10.099 9.917-10.099c3.109 0 5.193 1.318 6.38 2.464l4.339-4.182c-2.786-2.599-6.396-4.182-10.719-4.182-8.844 0-16 7.151-16 16s7.156 16 16 16c9.234 0 15.365-6.49 15.365-15.635 0-1.052-0.115-1.854-0.255-2.651z"></path>
                 </svg>

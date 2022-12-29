@@ -17,7 +17,9 @@ const CompletedTask = () => {
   } = useQuery({
     queryKey: ["tasks"],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/tasks/${user?.email}`);
+      const res = await fetch(
+        `https://todo-server-dusky.vercel.app/tasks/${user?.email}`
+      );
       const data = await res.json();
       return data;
     },
@@ -28,7 +30,7 @@ const CompletedTask = () => {
       id: task,
     };
 
-    fetch(`http://localhost:5000/incomplete/${task._id}`, {
+    fetch(`https://todo-server-dusky.vercel.app/incomplete/${task._id}`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -46,7 +48,7 @@ const CompletedTask = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, you want to Delete?");
     if (proceed) {
-      fetch(`http://localhost:5000/task/${id}`, {
+      fetch(`https://todo-server-dusky.vercel.app/task/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

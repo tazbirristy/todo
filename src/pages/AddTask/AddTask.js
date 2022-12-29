@@ -37,7 +37,7 @@ const AddTask = () => {
             email: user.email,
           };
           // save tasks information to the database
-          fetch("http://localhost:5000/tasks", {
+          fetch("https://todo-server-dusky.vercel.app/tasks", {
             method: "POST",
             headers: {
               "content-type": "application/json",

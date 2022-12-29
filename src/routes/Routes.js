@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
         path: "/editTask/:id",
         element: <EditTask></EditTask>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/task/${params.id}`),
+          fetch(`https://todo-server-dusky.vercel.app/task/${params.id}`),
       },
     ],
   },
