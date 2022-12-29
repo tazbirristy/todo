@@ -100,9 +100,11 @@ const MyTask = () => {
                     <td>{task.description}</td>
                     <td>{task.name}</td>
                     <td>
-                      <button className="px-4  rounded-sm bg-green-900 text-white">
-                        Edit
-                      </button>
+                      <Link to={`/editTask/${task._id}`}>
+                        <button className="px-4  rounded-sm bg-green-900 text-white">
+                          Edit
+                        </button>
+                      </Link>
                     </td>
                     <td>
                       <button
